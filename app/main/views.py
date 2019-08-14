@@ -57,14 +57,14 @@ def provider():
 
 #########***************** FACTS **********************************#############
 #######***************************************************************##############
-@main.route("/facts")
-def facts():
+@main.route("/fact")
+def fact():
     """
     A view that displays the cancer facts page
 
     """
     title = 'Facts'
-    return render_template("provider.html", title = title)
+    return render_template("fact.html", title = title)
 
 #########*****************END FACTS**********************************#############
 #######***************************************************************##############
