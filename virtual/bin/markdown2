@@ -1,4 +1,4 @@
-#!/home/moringa/Desktop/carehub/virtual/bin/python
+#!/home/mannuh/Documents/blog/virtual/bin/python
 
 import sys
 from os.path import join, dirname, exists
