@@ -1,7 +1,7 @@
 import os
 
 class Config:
-    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://moringa-school:123@localhost/blog'
+    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://moringa:vinceobindi1005@localhost/blog'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     UPLOADED_PHOTOS_DEST ='app/static/photos'
     SECRET_KEY = 'mannuh'
