@@ -6,7 +6,7 @@ from ..models import User,Post,Role,Subscriber,Comment
 from flask_login import login_required,current_user
 import markdown2
 from ..email import mail_message
-from ..request import get_quote
+# from ..request import get_quote
 
 @main.route("/",methods=['GET','POST'])
 def index():
@@ -25,10 +25,10 @@ def index():
 
     title = "Welcome to My Blog"
 
-    name  = "Quote"
-    quote = get_quote()
+    # name  = "Quote"
+    # quote = get_quote()
 
-    return render_template('index.html',title=title,posts=posts,subscriber_form=form,name=name,quote=quote)
+    return render_template('index.html',title=title,posts=posts,subscriber_form=form)#name=name,#quote=quote
 
 #######*********************SURPORT**************************##############
 ####*********************************************************##############
@@ -79,11 +79,46 @@ def about():
 
     """
     title = 'Facts'
-    return render_template("provider.html", title = title)
+    return render_template("about.html", title = title)
 
 #########*****************END ABOUT**********************************#############
 #######***************************************************************##############
 
+############********************* CONTACT US *************************##############
+################******************************************************##############
+@main.route('/contact')
+def contact():
+
+    title = 'Contact Us'
+
+    return render_template("contact.html")
+
+############**************************END CONTACT US *******************###########
+#################*****************************************************#############
+
+
+############********************* CONTACT US *************************##############
+################******************************************************##############
+@main.route('/facts')
+def facts():
+
+    title = 'Contact Us'
+
+    return render_template("facts.html")
+
+############**************************END CONTACT US *******************###########
+#################*****************************************************#############
+############********************* BLOG *************************##############
+################******************************************************##############
+@main.route('/blog')
+def blog():
+
+    title = 'blog'
+
+    return render_template("contact.html")
+
+############**************************END CONTACT US *******************###########
+#################*****************************************************#############
 
 @main.route('/user/<uname>')
 @login_required

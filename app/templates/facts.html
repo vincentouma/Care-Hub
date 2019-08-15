@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>CareHub+</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400, 700" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/animate.css">
+    <link rel="stylesheet" href="static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="static/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="static/css/jquery.timepicker.css">
+
+    <link rel="stylesheet" href="static/fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="static/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/fonts/flaticon/font/flaticon.css">
+
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="static/css/style.css">
+  </head>
+  <body>
+
+    <header role="banner">
+      <div class="top-bar">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-sm-6 col-5">
+              <ul class="social list-unstyled">
+                <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-sm-6 col-7 text-right">
+              <p class="mb-0">
+                <a href="#" class="cta-btn" data-toggle="modal" data-target="#modalAppointment">Make an Appointment</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="/index">CareHub<span>+</span>  </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarsExample05">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/index">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="services.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <a class="dropdown-item" href="#">Institute</a>
+                  <a class="dropdown-item" href="#">Departments</a>
+                  <a class="dropdown-item" href="services.html">Services</a>
+                </div>
+
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="doctors.html" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Doctors</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                  <a class="dropdown-item" href="doctors.html">Find Doctors</a>
+                  <a class="dropdown-item" href="#">Practitioner</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"href="{{url_for('auth.login')}}">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+
+
+    <section class="home-slider inner-page owl-carousel">
+      <div class="slider-item" style="background-image: url('static/img/slider-2.jpg');">
+
+        <div class="container">
+          <div class="row slider-text align-items-center">
+            <div class="col-md-7 col-sm-12 element-animate">
+              <h1>Cnacer &amp; Facts</h1>
+              <h2>What is cancer and what courses it</h2>
+                <p>Cancer is a collection of over 200 diseases in which cells of an organ or tissue in the body become abnormal, growing and multiplying out of control.</p>
+                <p>Cancer is NOT caused by witchcraft or any form of supernatural force. Cancer is a disease that can affect anyone, anywhere, in any country, at anytime.  Cancer is a complex group of diseases with many possible causes</p>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    <!-- END slider -->
+
+
+    <section class="section bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 element-animate">
+            <div class="media d-block media-custom text-left">
+              <img src="static/img/img_thumb_1.jpg" alt="Image Placeholder" class="img-fluid">
+              <div class="media-body">
+                <span class="meta-post">Causes of Cancer</span>
+                <h3 class="mt-0 text-black"><a href="#" class="text-black">Posssible courses of cancer</a></h3>
+                <p>The possible causes of of cancer are among others, Age, Immune system, Environmental exposures to cacinogens, Certain types of infections, Lifestyle factors, such as smoking, diet, e.g. red meat, physical inactivity,and Genetic factors.</p>
+                <p class="clearfix">
+                  <a href="/fact" class="float-left">Read more</a>
+                  <!-- <a href="#" class="float-right meta-chat"><span class="ion-chatbubble"></span> 8</a> -->
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 element-animate">
+            <div class="media d-block media-custom text-left">
+              <img src="static/img/img_thumb_2.jpg" alt="Image Placeholder" class="img-fluid">
+              <div class="media-body">
+                <span class="meta-post">Fighting Cancer</span>
+                <h3 class="mt-0 text-black"><a href="#" class="text-black">What lifestyle choices can I make to help me fight Cancer?</a></h3>
+                <p>There are alot of things we can do to stop cancer, this list is not exhaustive, and we advice you to dicuss about this and much with your consultant of choice!</p>
+                <ol>
+                    <li>Get regular physical activity.</li>
+
+                    <li>Drink plenty of water.</li>
+
+                    <li>Get 10-15 minutes of sunshine a day</li>
+
+                    <li>Do, eat, live everything in moderation.  Reduce stress.</li>
+
+                    <li>Allow yourself 8 hours of sleep at night for optimum rest.</li>
+
+                    <p>Eat a balanced diet</p>
+
+                    <li>Eat in moderation.</li>
+
+                    <li>Eat a healthy diet, with a variety of fruits and vegetables.</li>
+
+                    <li>Eat food as close as possible to its natural form</li>
+
+                    <li>Limit your intake of processed foods</li>
+                </ol>
+                <p class="clearfix">
+                  <a href="/fact" class="float-left">Read more</a>
+                  <!-- <a href="#" class="float-right meta-chat"><span class="ion-chatbubble"></span> 8</a> -->
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 element-animate">
+            <div class="media d-block media-custom text-left">
+              <img src="static/img/img_thumb_3.jpg" alt="Image Placeholder" class="img-fluid">
+              <div class="media-body">
+                <span class="meta-post">Signs and Symptoms</span>
+                <h3 class="mt-0 text-black"><a href="#" class="text-black">What are some signs and symptoms of Cancer?</a></h3>
+                <p>You can not afford to ignore cancer, it is such a menace! You ought to know some of the general symptoms and signs of cancer. <br> Here is a brief listing of some of the facts:</p>
+                <ol>
+                  <li>Unexplained weight loss</li>
+                  <li>Prolonged fever</li>
+                  <li>Prolonged, unexplained pain</li>
+                  <li>Skin changes</li>
+                  <li>Change in bowel habits or bladder function</li>
+                  <li>Sores that do not heal</li>
+                  <li>White patches inside the mouth or white spots on the tongue</li>
+                  <li>Unusual vaginal bleeding or discharge</li>
+                  <li>Thickening or lump in the breast or other parts of the body</li>
+                  <li>Any new skin change</li>
+
+                  </ol>
+                  <p class="clearfix">
+                  <a href="/fact" class="float-left">Read more</a>
+                  <!-- <a href="#" class="float-right meta-chat"><span class="ion-chatbubble"></span> 8</a> -->
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-5">
+          <div class="col-md-4 element-animate">
+            <div class="media d-block media-custom text-left">
+              <img src="static/img/img_thumb_1.jpg" alt="Image Placeholder" class="img-fluid">
+              <div class="media-body">
+                <span class="meta-post">How is Cancer diagnosed?</span>
+                <h3 class="mt-0 text-black"><a href="#" class="text-black">If a cancer is suspected from your symptoms:</a></h3>
+                <!-- <p>If a cancer is suspected from your symptoms:</p> -->
+                <p>1.Your doctor will examine you to look for abnormalities such as a lump under the skin or an enlarged liver. </p>
+                <p>You may be referred for tests such as X-rays, scan, blood tests, endoscopy, colonoscopy, bronchoscopy, etc depending on where the suspected cancer is situated. These tests can often find the exact site of a suspected cancer. However, a biopsy** is often needed to be certain that the abnormality is a cancer and not something else (such as a benign tumour).</p>
+
+                <p class="clearfix">
+                  <a href="/fact" class="float-left">Read more</a>
+                  <!-- <a href="#" class="float-right meta-chat"><span class="ion-chatbubble"></span> 8</a> -->
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 element-animate">
+            <div class="media d-block media-custom text-left">
+              <img src="static/img/img_thumb_2.jpg" alt="Image Placeholder" class="img-fluid">
+              <div class="media-body">
+                <span class="meta-post">Treatment Options for Cancer</span>
+                <h3 class="mt-0 text-black"><a href="#" class="text-black">What are the treatment options for Cancer?</a></h3>
+                <p>Treatment options vary, depending on the type of cancer and how far it has grown or spread. The three most common treatments are:</p>
+                <ul>
+
+                <li>Surgery</li>
+                <p>It may be possible to operate and remove malignant turmours.</p>
+                <li>Chemotherapy</li>
+                <p>This is a treatment that uses anti-cancer drugs to kill cancer cells, or to stop them from multiplying. There are various different types of drugs used for chemotherapy. The drug or combination of drugs selected depends on the type of cancer being treated.</p>
+                <li>Radiotherapy</li>
+                <p>This is a treatment that uses high energy beams of radiation which are focused on cancerous tissue. This kills cancer cells, or stops cancer cells from multiplying.</p>
+                <li>Bone Marrow Transplant</li>
+                  <p>High dose chemotherapy may damage bone marrow cells and lead to blood problems. However, if you receive healthy bone marrow after the chemotherapy then this helps to overcome this problem.</p>
+                  <li>Hormone therapy: </li>
+                  <p>This is where drugs are used to block the effects of hormones. This treatment may be used for cancers that are “hormone sensitive” such as some cancers of the breast, prostate and uterus.</p>
+                  <li>Immunotherapy: </li>
+                  <p>Some treatments can boost the immune system to help to fight cancer. More specific immunotherapy involves injections of antibodies which aim to attack and destroy certain types of cancer cells.</p>
+                  <li>Gene therapy </li>
+                  <p>Is a new area of possible treatments. Research is underway to find ways of blocking, repairing or replacing abnormal genes in cancer cells.</p>
+                </ul>
+
+                <p class="clearfix">
+                  <a href="/fact" class="float-left">Read more</a>
+                  <!-- <a href="#" class="float-right meta-chat"><span class="ion-chatbubble"></span> 8</a> -->
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 element-animate">
+            <div class="media d-block media-custom text-left">
+              <img src="static/img/img_thumb_3.jpg" alt="Image Placeholder" class="img-fluid">
+              <div class="media-body">
+                <span class="meta-post">Questions to the Doctor(s)</span>
+                <h3 class="mt-0 text-black"><a href="#" class="text-black">Some questions you may want to ask your doctor</a></h3>
+                <ol>
+                <li>What kind of cancer have I got?</li>
+                <li>How large is it and has it spread to other parts of my body?</li>
+                <li>What are the treatment options for this type of cancer?</li>
+                <li>What are the risks and possible side effects of the treatment options?</li>
+                <li>How successful is the treatment for my type and stage of cancer?</li>
+                <li>s the aim of treatment to cure or to control the cancer?</li>
+                    <li>What if I choose not to have treatment?</li>
+                    <li>Can I have a second opinion?</li>
+                </ol>
+                <p class="clearfix">
+                  <a href="/fact" class="float-left">Read more</a>
+                  <!-- <a href="#" class="float-right meta-chat"><span class="ion-chatbubble"></span> 8</a> -->
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row element-animate">
+          <div class="col-md-5">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="/">Home</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a href="#" class="cta-link element-animate" data-toggle="modal" data-target="#modalAppointment">
+      <span class="sub-heading">Ready to Visit?</span>
+      <span class="heading">Make an Appointment</span>
+    </a>
+    <!-- END cta-link -->
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <div class="row mb-5 element-animate">
+          <div class="col-md-3 mb-5">
+            <h3>Services</h3>
+            <ul class="footer-link list-unstyled">
+              <li><a href="#">Find a doctor</a></li>
+              <li><a href="#">Urgent Care</a></li>
+              <li><a href="#">Emergency Care</a></li>
+              <li><a href="#">Procedures &amp; Treatments</a></li>
+              <li><a href="#">Online Services</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-5">
+            <h3>Latest News</h3>
+            <ul class="footer-link list-unstyled">
+              <li><a href="#">News &amp; Press Releases</a></li>
+              <li><a href="#">Health Care Professional News</a></li>
+              <li><a href="#">Events &amp; Conferences</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-5">
+            <h3>About</h3>
+            <ul class="footer-link list-unstyled">
+              <li><a href="#">About The Hospital</a></li>
+              <li><a href="#">Testimonials</a></li>
+              <li><a href="#">Accreditations &amp; Awards</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Feedback</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-5">
+            <h3>Location &amp; Contact</h3>
+            <p class="mb-5">134 Street Name, City Name Here, United States</p>
+
+            <h4 class="text-uppercase mb-3 h6 text-white">Email</h5>
+            <p class="mb-5"><a href="mailto:info@yourdomain.com">info@yourdomain.com</a></p>
+
+            <h4 class="text-uppercase mb-3 h6 text-white">Phone</h5>
+            <p>+1 24 435 3533</p>
+
+          </div>
+        </div>
+
+        <div class="row pt-md-3 element-animate">
+          <div class="col-md-12">
+            <hr class="border-t">
+          </div>
+          <div class="col-md-6 col-sm-12 copyright">
+            <p>&copy; 2019 CareHub+. Designed &amp; Developed by <a href="/">CareHub</a></p>
+          </div>
+          <div class="col-md-6 col-sm-12 text-md-right text-sm-left">
+            <a href="#" class="p-2"><span class="fa fa-facebook"></span></a>
+            <a href="#" class="p-2"><span class="fa fa-twitter"></span></a>
+            <a href="#" class="p-2"><span class="fa fa-instagram"></span></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- END footer -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalAppointment" tabindex="-1" role="dialog" aria-labelledby="modalAppointmentLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalAppointmentLabel">Appointment</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="#">
+              <div class="form-group">
+                <label for="appointment_name" class="text-black">Full Name</label>
+                <input type="text" class="form-control" id="appointment_name">
+              </div>
+              <div class="form-group">
+                <label for="appointment_email" class="text-black">Email</label>
+                <input type="text" class="form-control" id="appointment_email">
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="appointment_date" class="text-black">Date</label>
+                    <input type="text" class="form-control" id="appointment_date">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="appointment_time" class="text-black">Time</label>
+                    <input type="text" class="form-control" id="appointment_time">
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="form-group">
+                <label for="appointment_message" class="text-black">Message</label>
+                <textarea name="" id="appointment_message" class="form-control" cols="30" rows="10"></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Send Message" class="btn btn-primary">
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="static/js/jquery-3.2.1.min.js"></script>
+    <script src="static/js/popper.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/owl.carousel.min.js"></script>
+    <script src="static/js/bootstrap-datepicker.js"></script>
+    <script src="static/js/jquery.timepicker.min.js"></script>
+    <script src="static/js/jquery.waypoints.min.js"></script>
+    <script src="static/js/main.js"></script>
+  </body>
+</html>

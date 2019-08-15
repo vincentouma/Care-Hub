@@ -1,225 +1,205 @@
-{% extends 'bootstrap/base.html' %}
-{% import "bootstrap/wtf.html" as wtf %}
 
-{% block styles%}
-{{ super() }}
+​
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
 <!-- Font Awesome -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"> -->
 <!-- Bootstrap core CSS -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 <!-- Material Design Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/css/mdb.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link
-  href="https://fonts.googleapis.com/css?family=Cabin|Indie+Flower|Montserrat|Neucha|Noto+Serif+JP|Noto+Serif+KR|Roboto+Mono"
-  rel="stylesheet">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
-  integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-{% endblock %}
-{% block content %}
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400, 700" rel="stylesheet">
+
+<link rel="stylesheet" href="static/css/bootstrap.css">
+<link rel="stylesheet" href="static/css/animate.css">
+<link rel="stylesheet" href="static/css/owl.carousel.min.css">
+<link rel="stylesheet" href="static/css/bootstrap-datepicker.css">
+<link rel="stylesheet" href="static/css/jquery.timepicker.css">
+
+<link rel="stylesheet" href="static/fonts/ionicons/css/ionicons.min.css">
+<link rel="stylesheet" href="static/fonts/fontawesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="static/fonts/flaticon/font/flaticon.css">
+
+
+<!-- Theme Style -->
+<link rel="stylesheet" href="static/css/style.css">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+​
+<script
+src="https://code.jquery.com/jquery-3.4.1.js"
+integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+crossorigin="anonymous"></script>
+<title></title>
+</head>
+<body>
+<header role="banner">
+<div class="top-bar">
+ <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-6 col-5">
+        <ul class="social list-unstyled">
+          <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+          <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+          <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+        </ul>
+      </div>
+      <div class="col-md-6 col-sm-6 col-7 text-right">
+        <p class="mb-0">
+          <a href="{{url_for('auth.login')}}" class="cta-btn" >Make an Appointment</a></p>
+      </div>
+    </div>
+ </div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+ <div class="container">
+    <a class="navbar-brand" href="index.html">Care<span>HuB</span>  </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+​
+    <div class="collapse navbar-collapse" id="navbarsExample05">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="services.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown04">
+            <a class="dropdown-item" href="#">Support</a>
+            <a class="dropdown-item" href="#">Facts</a>
+            <a class="dropdown-item" href="services.html">Providers</a>
+          </div>
+​
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="doctors.html" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Doctors</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown05">
+            <a class="dropdown-item" href="doctors.html">Find Doctors</a>
+            <a class="dropdown-item" href="#">Practitioner</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="news.html">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"href="{{url_for('auth.login')}}">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+ </div>
+</nav>
 
 <div class="container">
-
-<h1>Cancer Facts</h1>
-<h2>What is cancer and what courses it</h2>
-<p>Cancer is a collection of over 200 diseases in which cells of an organ or tissue in the body become abnormal, growing and multiplying out of control.</p>
-<p>Cancer is NOT caused by witchcraft or any form of supernatural force. Cancer is a disease that can affect anyone, anywhere, in any country, at anytime.  Cancer is a complex group of diseases with many possible causes</p>
-
-<!-- <h2>Posssible courses of cancer</h2>
-<ul>
-<li> Age:</li>
-<p>The older you are, the more likely that you will develop a cancer. This is probably due to a build up of damage to cells in the body over time. Also, the body’s defences and resistance against abnormal cells may become weaker as you get older.</p>
-<li>Immune System</li>
-<p>Those with a compromised immune system have an increased risk of developing certain cancers. E.g. people with HIV/AIDS, or people on immunosuppressive treatment</p>
-<li>Environmental exposures to different types of chemicals and radiation.</li>
-<li>Certain types of infections</li>
-<p>Some viruses are linked to certain cancers. E.g. those with persistent infection with the Hepatitis B or Hepatitis C virus have an increased risk of developing cancer of the liver.</p>
-<li>Lifestyle factors such as tobacco use, diet, physical inactivity</li>
-<li>Genetic factors</li>
-</ul> -->
-
-<!-- <h2>What lifestyle choices can I make to help me fight Cancer?</h2> -->
-
-
-<!-- <ol>
-
-
-    <li>Get regular physical activity.</li>
-
-    <li>Drink plenty of water.</li>
-
-    <li>Get 10-15 minutes of sunshine a day</li>
-
-    <li>Do, eat, live everything in moderation.  Reduce stress.</li>
-
-    <li>Allow yourself 8 hours of sleep at night for optimum rest.</li>
-
-    <p>Eat a balanced diet</p>
-
-    <li>Eat in moderation.</li>
-
-    <li>Eat a healthy diet, with a variety of fruits and vegetables.</li>
-
-    <li>Eat food as close as possible to its natural form</li>
-
-    <li>Limit your intake of processed foods</li>
-</ol> -->
-
-<!-- <h2>What are some signs and symptoms of Cancer?</h2> -->
-<!-- <p>You cannot afford to ignore cancer.  Instead, you should know some of the general signs and symptoms of cancer.</p>
-<p>But remember, having any of these does not mean that you have cancer—many other things cause these signs and symptoms, too.</p> -->
-
-<h2>Signs and Symptoms</h2>
-<ol>
-<li>Unexplained weight loss</li>
-<li>Prolonged fever</li>
-<li>Prolonged, unexplained pain</li>
-<li>Skin changes</li>
-<li>Change in bowel habits or bladder function</li>
-<li>Sores that do not heal</li>
-<li>White patches inside the mouth or white spots on the tongue</li>
-<li>Unusual vaginal bleeding or discharge</li>
-<li>Thickening or lump in the breast or other parts of the body</li>
-<li>Any new skin change</li>
-
-</ol>
-<h2>How is Cancer diagnosed?</h2>
-<p>If a cancer is suspected from your symptoms:</p>
-<p>1.Your doctor will examine you to look for abnormalities such as a lump under the skin or an enlarged liver. </p>
-<p>You may be referred for tests such as X-rays, scan, blood tests, endoscopy, colonoscopy, bronchoscopy, etc depending on where the suspected cancer is situated. These tests can often find the exact site of a suspected cancer. However, a biopsy** is often needed to be certain that the abnormality is a cancer and not something else (such as a benign tumour).</p>
-
-<h2>What are the treatment options for Cancer?</h2>
-<p>Treatment options vary, depending on the type of cancer and how far it has grown or spread. The three most common treatments are:</p>
-<ul>
-
-<li>Surgery</li>
-<p>It may be possible to operate and remove malignant turmours.</p>
-<li>Chemotherapy</li>
-<p>This is a treatment that uses anti-cancer drugs to kill cancer cells, or to stop them from multiplying. There are various different types of drugs used for chemotherapy. The drug or combination of drugs selected depends on the type of cancer being treated.</p>
-<li>Radiotherapy</li>
-<p>This is a treatment that uses high energy beams of radiation which are focused on cancerous tissue. This kills cancer cells, or stops cancer cells from multiplying.</p>
-<li>Bone Marrow Transplant</li>
-  <p>High dose chemotherapy may damage bone marrow cells and lead to blood problems. However, if you receive healthy bone marrow after the chemotherapy then this helps to overcome this problem.</p>
-  <li>Hormone therapy: </li>
-  <p>This is where drugs are used to block the effects of hormones. This treatment may be used for cancers that are “hormone sensitive” such as some cancers of the breast, prostate and uterus.</p>
-  <li>Immunotherapy: </li>
-  <p>Some treatments can boost the immune system to help to fight cancer. More specific immunotherapy involves injections of antibodies which aim to attack and destroy certain types of cancer cells.</p>
-  <li>Gene therapy </li>
-  <p>Is a new area of possible treatments. Research is underway to find ways of blocking, repairing or replacing abnormal genes in cancer cells.</p>
-</ul>
-
-<h2>Some questions you may want to ask your doctor</h2>
-<ol>
-<li>What kind of cancer have I got?</li>
-<li>How large is it and has it spread to other parts of my body?</li>
-<li>What are the treatment options for this type of cancer?</li>
-<li>What are the risks and possible side effects of the treatment options?</li>
-<li>How successful is the treatment for my type and stage of cancer?</li>
-<li>s the aim of treatment to cure or to control the cancer?</li>
-    <li>What if I choose not to have treatment?</li>
-    <li>Can I have a second opinion?</li>
-</ol>
-</div>
-#################******************************************************STYLING THE CONTACTS*********************************************###################################
-
-<!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item">
-    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
-      aria-selected="true">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
-      aria-selected="false">Profile</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
-      aria-selected="false">Contact</a>
-  </li>
-</ul>
-<div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">Raw denim you
-    probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master
-    cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro
-    keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip
-    placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi
-    qui.</div>
-  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Food truck fixie
-    locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit,
-    blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee.
-    Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum
-    PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS
-    salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit,
-    sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester
-    stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</div>
-  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Etsy mixtape
-    wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack
-    lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard
-    locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify
-    squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie
-    etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog
-    stumptown. Pitchfork sustainable tofu synth chambray yr.</div>
-</div> -->
-
 <div class="row">
-  <div class="col-4">
-    <div id="list-example" class="list-group">
-      <a class="list-group-item list-group-item-action active" href="#list-item-1"><h2>Posssible courses of cancer</h2></a>
-      <a class="list-group-item list-group-item-action" href="#list-item-2"><h2>Lifestyle choices to fight Cancer?</h2></a>
-      <a class="list-group-item list-group-item-action" href="#list-item-3"><h2>Signs and symptoms of Cancer?</h2></a>
-      <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
-      <a class="list-group-item list-group-item-action" href="#list-item-2">Item2</a>
-      <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
-      <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
-    </div>
-  </div>
-  <div class="col-8">
-    <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example z-depth-1">
-      <h4 id="list-item-1">Posssible courses of cancer</h4>
-          <ul>
-          <li> Age:</li>
-          <p>The older you are, the more likely that you will develop a cancer. This is probably due to a build up of damage to cells in the body over time. Also, the body’s defences and resistance against abnormal cells may become weaker as you get older.</p>
-          <li>Immune System</li>
-          <p>Those with a compromised immune system have an increased risk of developing certain cancers. E.g. people with HIV/AIDS, or people on immunosuppressive treatment</p>
-          <li>Environmental exposures to different types of chemicals and radiation.</li>
-          <li>Certain types of infections</li>
-          <p>Some viruses are linked to certain cancers. E.g. those with persistent infection with the Hepatitis B or Hepatitis C virus have an increased risk of developing cancer of the liver.</p>
-          <li>Lifestyle factors such as tobacco use, diet, physical inactivity</li>
-          <li>Genetic factors</li>
-          </ul>
-      <h4 id="list-item-2">What lifestyle choices can I make to help me fight Cancer?</h4>
+<div class="col-4 card">
+  <h1>Cancer Facts</h1>
+  <h2>What is cancer and what courses it</h2>
+  <p>Cancer is a collection of over 200 diseases in which cells of an organ or tissue in the body become abnormal, growing and multiplying out of control.</p>
+  <p>Cancer is NOT caused by witchcraft or any form of supernatural force. Cancer is a disease that can affect anyone, anywhere, in any country, at anytime.  Cancer is a complex group of diseases with many possible causes</p>
 
-      <ol>
-          <li>Get regular physical activity.</li>
-
-          <li>Drink plenty of water.</li>
-
-          <li>Get 10-15 minutes of sunshine a day</li>
-
-          <li>Do, eat, live everything in moderation.  Reduce stress.</li>
-
-          <li>Allow yourself 8 hours of sleep at night for optimum rest.</li>
-
-          <p>Eat a balanced diet</p>
-
-          <li>Eat in moderation.</li>
-
-          <li>Eat a healthy diet, with a variety of fruits and vegetables.</li>
-
-          <li>Eat food as close as possible to its natural form</li>
-
-          <li>Limit your intake of processed foods</li>
-      </ol>
-
-      <h4 id="list-item-3">What are some signs and symptoms of Cancer?</h4>
-      <p>Quis anim sit do amet fugiat dolor velit sit ea ea do reprehenderit culpa duis. Nostrud aliqua ipsum
-        fugiat minim proident occaecat excepteur aliquip culpa aute tempor reprehenderit. Deserunt tempor
-        mollit elit ex pariatur dolore velit fugiat mollit culpa irure ullamco est ex ullamco excepteur.</p>
-      <h4 id="list-item-4">Item 4</h4>
-      <p>Quis anim sit do amet fugiat dolor velit sit ea ea do reprehenderit culpa duis. Nostrud aliqua ipsum
-        fugiat minim proident occaecat excepteur aliquip culpa aute tempor reprehenderit. Deserunt tempor
-        mollit elit ex pariatur dolore velit fugiat mollit culpa irure ullamco est ex ullamco excepteur.</p>
-    </div>
-  </div>
 </div>
+<div class="col-4 card">
+  <h2>How is Cancer diagnosed?</h2>
+  <p>If a cancer is suspected from your symptoms:</p>
+  <p>1.Your doctor will examine you to look for abnormalities such as a lump under the skin or an enlarged liver. </p>
+  <p>You may be referred for tests such as X-rays, scan, blood tests, endoscopy, colonoscopy, bronchoscopy, etc depending on where the suspected cancer is situated. These tests can often find the exact site of a suspected cancer. However, a biopsy** is often needed to be certain that the abnormality is a cancer and not something else (such as a benign tumour).</p>
+  
 
-{% endblock%}
+  
+</div>
+<div class="col-4 card">
+  <h2>Some questions you may want to ask your doctor</h2>
+  <img src="app/static/img/qa.png" alt="q&a" class="img-fluid">
+  <ol>
+  <li>What kind of cancer have I got?</li>
+  <li>How large is it and has it spread to other parts of my body?</li>
+  <li>What are the treatment options for this type of cancer?</li>
+  <li>What are the risks and possible side effects of the treatment options?</li>
+  <li>How successful is the treatment for my type and stage of cancer?</li>
+  <li>s the aim of treatment to cure or to control the cancer?</li>
+      <li>What if I choose not to have treatment?</li>
+      <li>Can I have a second opinion?</li>
+  </ol>
+</div>
+</div>
+<div class="row card-body">
+
+    <div class="col-6">
+        <h2>Signs and Symptoms</h2>
+        <ol>
+        <li>Unexplained weight loss</li>
+        <li>Prolonged fever</li>
+        <li>Prolonged, unexplained pain</li>
+        <li>Skin changes</li>
+        <li>Change in bowel habits or bladder function</li>
+        <li>Sores that do not heal</li>
+        <li>White patches inside the mouth or white spots on the tongue</li>
+        <li>Unusual vaginal bleeding or discharge</li>
+        <li>Thickening or lump in the breast or other parts of the body</li>
+        <li>Any new skin change</li>
+        
+        </ol>
+    </div>
+    <div class="col-6" styles="display:block;float-direction:float-left">
+      <img src="https://www.nursingtimes.net/pictures/380xany/0/0/9/3044009_signs-and-symptoms.jpg" alt="" class="img-fluid">
+    </div>
+</div>
+  <div class="row">
+    <h2>What are the treatment options for Cancer?</h2>
+    <p>Treatment options vary, depending on the type of cancer and how far it has grown or spread. The three most common treatments are:</p>
+   <div class="col-4">
+    <img src="https://res.cloudinary.com/broadcastmed/image/fetch/q_auto,c_fill,w_413,h_232,g_faces:center,f_auto/http%3A%2F%2F55933%2Dbcmed%2Es3%2Eamazonaws%2Ecom%2Fbcp%2Fimages%2ForlVideoAssets%2FimgSource%2Fjhm%5Fhead%2Dneck%2Dcancer%2Dpodcast%2Dthumb%2Ejpg" alt="surger" class="img-fluid img-thumbnail">
+    <li>Surgery</li>
+    <p>It may be possible to operate and remove malignant turmours.</p>
+   </div>
+   
+    <div class="col-4">
+      <img src="https://images.agoramedia.com/everydayhealth/gcms/What-Is-Chemotherapy-722x406.jpg" alt="Radiotherapy" class="img-fluid img-thumbnail">
+      <li>Chemotherapy</li>
+      <p>This is a treatment that uses anti-cancer drugs to kill cancer cells, or to stop them from multiplying. There are various different types of drugs used for chemotherapy. The drug or combination of drugs selected depends on the type of cancer being treated.</p>
+    </div>
+
+    <div class="col-4">
+      <img src="https://sgcweb.s3.wasabisys.com/itnonline/s3fs-public/styles/slider/public/Most%20Popular%20TP%20system%20AI.jpg?itok=9L00aCpj" alt="radio" class="img-fluid img-thumbnail">
+      <li>Radiotherapy</li>
+      <p>This is a treatment that uses high energy beams of radiation which are focused on cancerous tissue. This kills cancer cells, or stops cancer cells from multiplying.</p>
+    </div>
+
+  <div class="card row card-body" styles="text-align:center">
+          <img src="https://previews.123rf.com/images/tashatuvango/tashatuvango1604/tashatuvango160401152/55457457-hormone-therapy-medical-concept-with-selective-focus-hormone-therapy-pills-injections-and-syringe-wi.jpg" alt="" class="img-fluid img-thumbnail">
+          <li>Hormone therapy: </li>
+          <p>This is where drugs are used to block the effects of hormones. This treatment may be used for cancers that are “hormone sensitive” such as some cancers of the breast, prostate and uterus.</p>
+         
+      </div>
+
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <img src="https://www.cancer.gov/images/cdr/live/CDR554337.jpg" alt="bmt" class="img-fluid img-thumbnail">
+      <li>Bone Marrow Transplant</li>
+      <p>High dose chemotherapy may damage bone marrow cells and lead to blood problems. However, if you receive healthy bone marrow after the chemotherapy then this helps to overcome this problem.</p>
+    </div>
+    <div class="col-4">
+      <img src="https://gyroscopetx.com/wp-content/uploads/2017/06/Gene-Therapy-infographic.jpg" alt="genetherapy" class="img-fluid img-thumbnail">
+      <li>Gene therapy </li>
+      <p>Is a new area of possible treatments. Research is underway to find ways of blocking, repairing or replacing abnormal genes in cancer cells.</p>
+    <!-- </ul> -->
+    </div>
+    <div class="col-4">
+      <img src="https://cdn2.poz.com/56602_CHFa-18-042.jpg_5dc71507-e2c0-495c-9fe5-35c68961a540.jpeg" alt="immunotherapy" class="img-fluid img-thumbnail">
+      <li>Immunotherapy: </li>
+      <p>Some treatments can boost the immune system to help to fight cancer. More specific immunotherapy involves injections of antibodies which aim to attack and destroy certain types of cancer cells.</p>
+     
+    </div>
+  </div>
+  </div>
+  </body>
+</html>
