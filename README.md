@@ -42,7 +42,8 @@ Behaviour   |  Input | Output|
 |CLicking user | Gives a list of the specific user's stories |Gives a list of the specific user's stories with dates they were posted|
 |Clicking the title of a stories (writer)| Opens the specific stories and allows update and delete |Opens the specific stories and allows update and delete|
 |Clicking the title of a blog post (non-user)| Allows read, comment and vote |Only allows read, comment and vote|
-
+|Clicking the make appointment button| You can make an appointment with the doctor |Connects you with a doctor's direct mail|
+|Clicking the leave a message button| You can send a direct message to our team |Connects you with the team's direct mail|
 
 ## Built With
 
