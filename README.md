@@ -35,3 +35,34 @@ Install and open virtual environment and run the app in a virtual environment us
 * Contact me where necessary through [carehub@gmail.com]
 
 ## BDD
+Behaviour   |  Input | Output|
+|:--------|:---------|:--------------|
+|Click On SignUp| Your email : | Allows user to register hence creating an account and provies entry into the app through a Login page |
+|Login Link |Allows registered users to login hence access other user priviledges such as post stories|Allows registered users to login hence access other user priviledges such as create and edit their stories|
+|CLicking user | Gives a list of the specific user's stories |Gives a list of the specific user's stories with dates they were posted|
+|Clicking the title of a stories (writer)| Opens the specific stories and allows update and delete |Opens the specific stories and allows update and delete|
+|Clicking the title of a blog post (non-user)| Allows read, comment and vote |Only allows read, comment and vote|
+
+
+## Built With
+
+* Flask - routing, templating, server
+* python3.6 - routing, templating, server
+* Markdown -README.md
+
+## Contributing
+
+If you want to put out a pull request you first have to send us the sample code that you want to add to our repository for cross-checking before we allow the pull.
+
+## Authors Other Works
+
+
+## Contacts
+
+* carehub@gmail.com
+
+## License
+
+ MIT License - see the LICENSE file below for details
+
+## Acknowledgments
