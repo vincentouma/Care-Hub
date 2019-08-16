@@ -1,27 +1,57 @@
-
+<!-- 
+​
+<div class="navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Care Hub</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{url_for('auth.register_admin')}}">Add Admin</a></li>
+                    <li><a href="/new_post">New Post</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    {% if current_user.role_id==1%}
+                    <li><a href="/new_post">New Post</a></li>
+                    <li><a href="{{url_for('auth.register_admin')}}">Add Admin</a></li>
+                    {% endif %} {% if current_user.is_authenticated %}
+                    <li>
+                      <a href="#">{{ current_user.username }}</a>
+                    </li>
+                    <li><a href="{{url_for('auth.logout')}}">Sign Out</a></li>
+                    {% else %}
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{url_for('auth.login')}}">Sign In</a></li>
+                    {% endif %}
+                  </ul>
+            </div>
+        </div>
+    </div>
+​
+################****************************************************########################## -->
+​
+​
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-  <title>CareHub+</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400, 700" rel="stylesheet">
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="static/css/bootstrap.css">
-  <link rel="stylesheet" href="static/css/animate.css">
-  <link rel="stylesheet" href="static/css/owl.carousel.min.css">
-  <link rel="stylesheet" href="static/css/bootstrap-datepicker.css">
-  <link rel="stylesheet" href="static/css/jquery.timepicker.css">
-
-  <link rel="stylesheet" href="static/fonts/ionicons/css/ionicons.min.css">
-  <link rel="stylesheet" href="static/fonts/fontawesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="static/fonts/flaticon/font/flaticon.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <!-- Theme Style -->
-  <link rel="stylesheet" href="static/css/style.css">
-</head>
+  <head>
+    <meta charset="utf-8">
+    <!-- Font Awesome -->
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"> -->
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/css/mdb.min.css" rel="stylesheet">
+ <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+ <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css') }} ">
+​
+ <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+​
+ <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+    <title></title>
+  </head>
   <body>
      <header role="banner">
      <div class="top-bar">
@@ -43,7 +73,7 @@
      </div>
      <nav class="navbar navbar-expand-lg navbar-light bg-light">
        <div class="container">
-          <a class="navbar-brand" href="/">Care <span>HuB</span>  </a>
+          <a class="navbar-brand" href="index.html">CarE <span>HuB</span>  </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -51,13 +81,13 @@
           <div class="collapse navbar-collapse" id="navbarsExample05">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="/">Home</a>
+                <a class="nav-link active" href="index.html">Home</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="services.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
                   <a class="dropdown-item" href="#">Support</a>
-                  <a class="dropdown-item" href="">Facts</a>
+                  <a class="dropdown-item" href="#">Facts</a>
                   <a class="dropdown-item" href="services.html">Providers</a>
                 </div>
 ​
@@ -86,6 +116,47 @@
        </div>
      </nav>
    </header>
-
+   <!-- END header -->
+​
+        <!--Navbar -->
+      <!--   <nav class="mb-1 navbar navbar-expand-lg navbar-dark orange lighten-1" style="font-family: 'Marck Script', cursive; font-size:35px;">
+          <a class="navbar-brand" href="#">Sweet</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
+            aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url_for('auth.register_admin')}}">Add Admin</a>
+              </li>
+              <li class="nav-item">
+                <a href="/new_post">New Post</a>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                {% if current_user.role_id==1%} -->
+                <!-- <a href="/new_post"> class="btn-floating btn-large cyan pulse"><i class="material-icons">edit</i></a> -->
+<!-- 
+                <li><a href="/new_post">New Post</a></li>
+                <li><a href="{{url_for('auth.register_admin')}}"><i class="fas fa-pen-fancy">Add Admin</i></a></li>
+                {% endif %} {% if current_user.is_authenticated %}
+                <li>
+                  <a href="#">{{ current_user.username }}</a>
+                </li>
+                <li><a href="{{url_for('auth.logout')}}">Sign Out</a></li>
+                {% else %}
+                <li role="separator" class="divider"></li>
+                <li><a href="{{url_for('auth.login')}}">Sign In</a></li>
+                {% endif %}
+              </ul>
+          </div>
+        </nav> -->
+        <!--/.Navbar -->
   </body>
 </html>
